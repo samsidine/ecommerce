@@ -28,6 +28,8 @@ public class UtilisateurEntity {
 	 @Column(name="PRENOM")
 	 private String prenom;
 	 
+	 @Column(name="EMAIL")
+	 private String email;
 	
 
 }
