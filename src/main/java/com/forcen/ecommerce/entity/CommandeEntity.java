@@ -1,5 +1,7 @@
 package com.forcen.ecommerce.entity;
 
+import java.util.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,25 +11,24 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-/**
- * @ehemba
- */
+
 @Entity
-@Table(name="UTILISATEUR")
+@Table(name="COMMANDE")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UtilisateurEntity {
+
+public class CommandeEntity {
 	
 	 @Id
      @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name="ID")
 	private int id;
 	 
-	 @Column(name="NOM")
-	 private String nom;
+	 @Column(name="DATE")
+	 private Date date;
 	
-	 @Column(name="PRENOM")
+	 @Column(name="STAU")
 	 private String prenom;
 	 
 	 @Column(name="EMAIL")

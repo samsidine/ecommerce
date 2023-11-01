@@ -1,5 +1,8 @@
 package com.forcen.ecommerce.entity;
 
+import java.io.Serializable;
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,29 +12,30 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-/**
- * @ehemba
- */
+
 @Entity
-@Table(name="UTILISATEUR")
+@Table(name="PANIER")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UtilisateurEntity {
+
+public class PanierEntity implements Serializable{
 	
-	 @Id
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
      @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name="ID")
 	private int id;
 	 
-	 @Column(name="NOM")
-	 private String nom;
+	 //@Column(name="PRODUITS")
+	// private List<ProduitEntity>  produits;
 	
-	 @Column(name="PRENOM")
-	 private String prenom;
+	 @Column(name="TOTAL")
+	 private int total;
 	 
-	 @Column(name="EMAIL")
-	 private String email;
-	
-
+	 
 }

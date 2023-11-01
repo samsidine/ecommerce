@@ -9,29 +9,27 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-/**
- * @ehemba
- */
+
 @Entity
-@Table(name="UTILISATEUR")
+@Table(name="FOURNISSEUR")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UtilisateurEntity {
+
+public class FournisseurEntity {
 	
 	 @Id
      @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name="ID")
 	private int id;
 	 
-	 @Column(name="NOM")
-	 private String nom;
+	 @Column(name="CODE")
+	 private String code;
 	
-	 @Column(name="PRENOM")
-	 private String prenom;
+	 @Column(name="LIBELLE")
+	 private String libelle;
 	 
-	 @Column(name="EMAIL")
-	 private String email;
+	
 	
 
 }
