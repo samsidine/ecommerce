@@ -1,5 +1,7 @@
 package com.forcen.ecommerce.entity;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,9 +20,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ProfileEntity {
+public class ProfileEntity implements Serializable{
 	
-	 @Id
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
      @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name="ID")
 	private int id;

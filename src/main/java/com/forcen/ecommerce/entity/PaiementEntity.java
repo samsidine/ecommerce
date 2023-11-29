@@ -1,6 +1,7 @@
 package com.forcen.ecommerce.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,37 +16,31 @@ import lombok.NoArgsConstructor;
  * @ehemba
  */
 @Entity
-@Table(name="UTILISATEUR")
+@Table(name="PAIEMENT")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UtilisateurEntity implements Serializable{
-	
-	 /**
+
+public class PaiementEntity implements Serializable{
+
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	
 	@Id
-     @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name="ID")
 	private int id;
 	 
-	 @Column(name="NOM")
-	 private String nom;
+	 @Column(name="DATE")
+	 private Date date;
 	
-	 @Column(name="PRENOM")
-	 private String prenom;
+	 @Column(name="MONTANT")
+	 private double montant;
 	 
-	 @Column(name="EMAIL")
-	 private String email;
-	 
-	 @Column(name="TELEPHONE")
-	 private int tel;
+	 @Column(name="MODE-DE-PAIEMENT")
+	 private String modeDePaiement;
 	
-	 @Column(name="TYPE UTILISATEUR")
-	 private String typeutilisateur;
-	 
-	 @Column(name="DAOUDA")
-	 private String daouda;
+
 }

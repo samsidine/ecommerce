@@ -1,5 +1,6 @@
 package com.forcen.ecommerce.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import jakarta.persistence.Column;
@@ -20,9 +21,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class CommandeEntity {
+/**
+ * @ehemba
+ */
+public class CommandeEntity implements Serializable{
 	
-	 @Id
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
      @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name="ID")
 	private int id;
@@ -30,11 +39,11 @@ public class CommandeEntity {
 	 @Column(name="DATE")
 	 private Date date;
 	
-	 @Column(name="STAU")
-	 private String prenom;
+	 @Column(name="STATUT")
+	 private String statut;
 	 
-	 @Column(name="EMAIL")
-	 private String email;
+	 @Column(name="TOTAL")
+	 private double total;
 	
 
 }
