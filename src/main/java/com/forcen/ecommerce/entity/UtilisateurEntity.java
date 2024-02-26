@@ -46,6 +46,6 @@ public class UtilisateurEntity implements Serializable{
 	 @Column(name="TYPE UTILISATEUR")
 	 private String typeutilisateur;
 	 
-	 @Column(name="DAOUDA")
-	 private String daouda;
+	 
+	
 }
